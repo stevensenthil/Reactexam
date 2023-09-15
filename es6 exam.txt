@@ -1,0 +1,189 @@
+           1.   ES6-published year
+		               -2015.
+					   
+		   2.   Difference between promise chaining and promise all
+		            Executes one by one (synchronous). Result of one execution can be passed to the next step. Execution time to fulfill all the promise is comparatively high. Chaining after an error is possible
+					
+		   3.   use of async and await
+		            Async and Await both are considered as special keywords which are provided by ES6 in order to perform some asynchronous data operations. Even synchronous operations could also be performed using these keywords.
+					
+		   4.  var a=[1,2,3,4,5];
+				let[b,...c]=a;
+				console.log(b,c);
+				
+				ans:[2, 3, 4, 5]
+				
+		   5.  const func=(a=5,b=7)=>{
+				console.log(a+b);
+				}
+				func(3)
+				
+				ans:10
+		 
+		   6.  Difference betweeen local and session storage?
+		            sessionStorage is similar to localStorage ; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+					Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.
+					
+		   7.    
+					input a=[15,25,14,26,89]
+					output:14
+					 how to solve using array method
+							const Array = [15, 25, 14, 26, 89];
+							const minimumValue = Math.min(...Array);
+       						console.log("Minimum value:", minimumValue
+							
+		    8.      Using call back function ,write a program to ensure that no empty space is present in password
+										function Passw(password, callback) {
+									  if (password.includes(' ')) {
+										callback(false);
+									  } else {
+										callback(true);
+									  }
+									}
+
+									function checkPassw(valid) {
+									  if (valid) {
+										console.log("Password is valid.");
+									  } else {
+										console.log("Password cannot contain empty spaces.");
+									  }
+									}
+
+									const password = "MyPassw0rd"; 
+									Passw(password, checkPassw); 
+												
+			
+			
+			9.         what are the 3 Methods to deep copy an array?
+			               Spread Operator 
+						   JSON.parse() and JSON.stringify()
+						   object.assign
+						   
+			10.        console.log(b);(2 marks)
+							let b=10;
+							Ans:	b is not defined
+							
+			11.        Difference between normal and arrow function
+	                       Since regular functions are constructible, they can be called using the 'new' keyword. However, the arrow functions are only 'callable' and not constructible. 
+						   Thus, we will get a run-time error on trying to construct a non-constructible arrow function using the new keyword.
+						   
+			12.        Explain with example about this keyword
+							this can be used to refer current class instance variable.
+							this can be used to invoke current class method (implicitly)
+							this() can be used to invoke current class constructor.
+							
+							
+			13.        List out any 5 advanced array methods
+								*find
+								*filter
+								*map
+								*forEach
+								*some
+								
+			14.        Example for callback hell
+							function step1(callback) {
+						  setTimeout(function () {
+							console.log("Step 1 completed");
+							callback();
+						  }, 1000);
+}                          function step2(callback) {
+							  setTimeout(function () {
+								console.log("Step 2 completed");
+								callback();
+							  }, 1000);
+							}
+
+							function step3(callback) {
+							  setTimeout(function () {
+								console.log("Step 3 completed");
+								callback();
+							  }, 1000);
+							}
+
+							function step4(callback) {
+							  setTimeout(function () {
+								console.log("Step 4 completed");
+								callback();
+							  }, 1000);
+							}
+
+							// Nested callbacks creating callback hell
+							step1(function () {
+							  step2(function () {
+								step3(function () {
+								  step4(function () {
+									console.log("All steps completed");
+								  });
+								});
+							  });
+							});
+
+            15.         Write a program to check if a number is a perfect cube or not using promise
+								function isPerfectCube(number) {
+						  return new Promise((resolve, reject) => {
+							if (typeof number !== 'number' || number <= 0) {
+							  reject(new Error('Invalid input. Please provide a positive number.'));
+							}
+							else {
+							  const cubeRoot = Math.cbrt(number);
+							  if (Number.isInteger(cubeRoot)) {
+								resolve(true); // It's a perfect cube
+							  } else {
+								resolve(false); // It's not a perfect cube
+							  }
+							}
+						  });
+						}
+						
+			         const numberToCheck = 27; // Change this to the number you want to check
+
+							isPerfectCube(numberToCheck)
+							  .then((result) => {
+								if (result) {
+								  console.log(`${numberToCheck} is a perfect cube.`);
+								} else {
+								  console.log(`${numberToCheck} is not a perfect cube.`);
+								}
+							  })
+							  .catch((error) => {
+								console.error(error.message);
+							  });
+							  
+							  
+							  
+							  
+							  
+		   16.      Difference between map and filter 
+					  Map:
+					  returns an array of pieces of information from the original array. In the callback function, return the data you wish to be part of the new array.
+					  Filter:
+					  returns a subset of the original array based on custom criteria. In your callback function, return a boolean value to determine whether or not each item will be included in the new array.
+             
+			17.      var a=[1,2,3,4,5];
+						let b=a.map((e)=>{
+						return e%2===0;
+						})
+						console.log(b);
+						     ans: [false, true, false, true, false]
+							 
+			18.     var a=[1,2,3,4,5];
+							let b=a.map((e)=>{
+							if( e%2===0)
+							{
+							return e;
+							}
+							})
+							console.log(b)
+							) [undefined, 2, undefined, 4, undefined]
+			
+			19.          Difference between primitive and non primitive data types in terms of deep and
+			             shallowcopy\
+                      The difference between primitive and non-primitive data types are as follows:
+					  Primitive types are predefined in Java. Non-primitive types are created by the programmer and is not defined by Java. Non Primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+			
+			
+			20.       Example for function with argument without return
+									function greet(name) {
+							  console.log(`Hello, ${name}!`);
+							}
+								greet("Alice");
