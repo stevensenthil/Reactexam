@@ -1,0 +1,59 @@
+1)How many types of export are there? 
+
+Answer: Two types of export
+		1. Named export
+		2. Default export
+
+2) In React.js which one of the following is used to create a class
+ for Inheritance ?
+
+Answer:extends keyword 
+
+
+3)What is the default port number in which the application run?
+
+Answer:  localhost:3000 .
+
+
+4)Which symbol is used to update Patch version?
+
+Answer:tilde ( ~ ) , caret ( ^ )
+
+
+5)What is the output of the following code?
+const make = 'Ford';
+const model = 'Mustang';
+const car = { make, model };
+console.log(car);
+
+Output:{ make: 'Ford', model: 'Mustang' }
+
+
+6)Which of the life cycle method in a React Component is called after
+ the component is 
+rendered for the first time?
+
+Answer:The componentDidMount() 
+
+
+7)Which attribute is used to populate value?
+
+Answer: Value
+
+8)What should the console read when the following code is run?
+const [, , animal] = ['Horse', 'Mouse', 'Cat'];
+console.log(animal);
+
+Output:Cat
+
+
+9) Whenever I update the state which lifecycle method is called?
+
+
+Answer:The componentDidUpdate .
+
+
+10)Use of componentDidMount:
+
+Answer:The componentDidMount() method allows us to execute the React code when the component is
+ already placed in the DOM (Document Object Model).
