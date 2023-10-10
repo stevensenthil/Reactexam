@@ -1,0 +1,49 @@
+1. Use of Context?
+      Context is primarily used when some data needs to be accessible by many components at different nesting levels.
+      Apply it sparingly because it makes component reuse more difficult. 
+      If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+
+2. What is useconex and use reduser?
+      useContext - a react hook, allowing functional components to take advantage of the context API. 
+      useReducer - a react hook, used in place of useState , generally for more complex state. 
+      dispatch - a function returned to us by useReducer , which sends action objects to the reducer function
+
+3. How to update state in context?
+       To update state in context, use the `useState` hook within the context provider component and provide a function to update the state.
+
+4. What is create context ?write it purpose
+        `createContext` is a function in React used to create a context object, which helps in sharing state and data across components efficiently.
+
+5. Context.Provider and Context.consumer?
+        Context allows components to access shared data, the provider sets the context's value, and the consumer consumes it within nested components.
+
+6. Difference b/w Redux and Context?
+        Redux is a state management library, while Context is a feature in React for sharing state locally. Redux is more suitable for complex applications.
+
+7. Purpose of useSelector and useDispatch hook?
+         `useSelector` is for accessing specific parts of Redux store state, and `useDispatch` is used to dispatch actions in React Redux.
+
+8. Use of Fragment?
+           Fragments in React allow grouping multiple elements without introducing extra parent divs in the DOM.
+
+9. What is Store in Redux
+   In Redux, a store is a centralized place to store application state.
+
+10. How to read initialstate and reduser for in redux?
+   Initial state is defined when creating a Redux store, and the reducer function specifies how state changes in response to actions.
+
+11. What is sass and uses?
+    SCSS is a superset of CSS that adds features like variables and nesting for more maintainable and organized styles.
+
+12. Difference b/w scss & css
+    SCSS is a preprocessor that extends CSS with features like variables and nesting, making stylesheets more modular and maintainable compared to traditional CSS.
+
+13. Why are go for lifecycle? 
+    Lifecycle methods in React allow you to perform actions at specific stages of a component's life, like componentDidMount for initial setup.
+
+14. WHich one is better Redux or Context ?Give reason
+    The choice between Redux and Context depends on the project's complexity; Redux is better for larger, more complex applications, while Context is simpler and suitable for smaller ones.
+
+15. How many slice created in redex and how many store created in redux
+    Redux can have multiple slices for different parts of the state, but typically, there's one store for the entire application.
+          
