@@ -1,0 +1,66 @@
+1. *Difference between state and props:*
+    State is internal and mutable data within a component, controlled by the component itself.
+    Props are external inputs, immutable, and passed from a parent component.
+   
+2. *Passing data from child to parent:*
+   You can pass data from a child to a parent component in React by defining a callback function in the parent and passing it as a prop to the child.
+   The child can call this callback to send data.
+
+3. *Fetching data from API in a class component:*
+   The `componentDidMount` lifecycle method is commonly used for fetching data from an API in a class component.
+
+4. *Controlled component in React:*
+   A controlled component in React is a form element (like an input field) whose value is controlled by React state.
+   Changes in the input are handled via state, ensuring React is the single source of truth for the component's value.
+
+5. *Purpose of componentDidUpdate lifecycle method:*
+   `componentDidUpdate` is used to perform side effects after a component has updated.
+    It's often used for making additional data requests when props or state change.
+
+6. *Conditional rendering in React JSX:*
+   You can conditionally render a component based on a boolean variable by using a conditional statement within JSX, such as `{isVisible ? <Component /> : null}`.
+
+7. *Invalid way to set initial state:*
+   Initializing state using the `render` method is not a valid approach. State should be initialized in the `constructor` or using class properties.
+
+8. *Purpose of the constructor method:*
+   The constructor method in a React class component is used for initializing state, binding event handlers, and other setup operations.
+
+9. *Asynchronous data fetching in class component:*
+   Asynchronous data fetching and state updates based on the fetched data should be performed in the `componentDidMount` lifecycle method in a class component.
+
+10. *Purpose of componentWillUpdate:*
+    `componentWillUpdate` is used for preparation before a component is about to update, but it's not recommended for making changes to the component's state.
+
+11. *Suitable use case for componentWillUpdate:*
+    A suitable use case for `componentWillUpdate` is when you need to prepare for an upcoming update but not actually make state changes,
+    such as saving the current scroll position before an update.
+
+12. *Initializing state in a React component:*
+    The `constructor` method is commonly used to initialize state or perform other setup operations in a React component.
+
+13. *Accessing current state in render method:*
+    You can access the current state of a React component within its `render` method using `this.state`.
+
+14. *Purpose of componentDidMount:*
+    The primary purpose of the `componentDidMount` lifecycle method is to perform side effects and data fetching after the component has been rendered to the DOM.
+
+15. *Updating component state in a functional component:*
+    In a functional component, you can update state using the `useState` hook by calling the state update function, which is returned by `useState`.
+
+16. *Passing data from parent to child using props:*
+    Data is passed from a parent component to a child component in React using props. You define props in the parent and pass them when rendering the child component.
+
+17. *Primary use case for componentWillUnmount:*
+    The primary use case for the `componentWillUnmount` lifecycle method is to clean up resources, event listeners, or
+    subscriptions before the component is removed from the DOM.
+
+18. *Modifying state directly without setState:*
+    Modifying state directly without using the `setState` method can lead to unexpected behavior and is not recommended in React.
+
+19. *Updating component state without setState:*
+    In class components, you should always use the `setState` method to update state. In functional components, you can use the `useState` hook's state update function.
+
+20. *Importance of unique key prop in map function:*
+    Providing a unique key prop to each rendered element when using the `map` function in React is important
+    for efficient rendering and component reconciliation, helping React identify which elements have changed

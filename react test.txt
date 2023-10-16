@@ -1,0 +1,251 @@
+1. What is React?
+	React is a JavaScript library for building user interfaces. 
+   	It's often used for creating web applications with dynamic and interactive user interfaces
+   	React allows developers to create reusable UI components and manage the state of these components efficiently.
+
+2. What are the advantages of using React?
+	Increases the application's performance with Virtual DOM.
+	JSX makes code easy to read and write.
+	It renders both on client and server side (SSR).
+	Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
+	Easy to write unit and integration tests with tools such as Jest.
+
+3. What is JSX?
+	JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe the structure of the user interface. 
+	It allows you to write HTML-like code within your JavaScript, which is then transpiled into regular JavaScript by tools like Babel. 
+	JSX makes it easier to create and visualize the component's structure.
+
+4. What are keys in React?
+	Keys are used in React to give a unique identity to elements in a list.
+	They help React identify which items have changed, been added, or removed in a list,
+	which is important for efficient rendering and updating of components, especially in lists or loops.
+
+5. What is React Components?
+	React components are the building blocks of a React application. 
+	They are like self-contained, reusable pieces of code that define a part of the user interface.
+	 Components can be either class-based or function-based.
+
+6. What is classComponent and functionalComponent difference?
+	Class components and functional components are two ways of defining React components.
+	Class components use ES6 classes and can have a state, lifecycle methods, and more complex logic.
+	Functional components are defined as JavaScript functions and are simpler and more concise. They can use React Hooks to manage state and side effects.
+
+7. What is Constructor?
+	In class components, the constructor is a special method used to initialize the component's state and bind event handlers.
+	It is called before the component is mounted.
+
+8. What is super keyword?
+	In a class constructor in JavaScript, super is used to call the constructor of the parent class when defining a subclass.
+	In React class components, you typically use super(props) to pass props to the parent class's constructor.
+
+9. What is the render function?
+	In a React class component, the render function is a required method that returns the JSX structure representing the component's UI.
+	This is the part of the component that gets displayed in the browser.
+
+10. How to change the state value?
+	You can change the state of a React component using the setState method.
+	This method is used to update the state with a new value, and when the state changes, React re-renders the component to reflect the updated state.
+
+11. What is the use of Life Cycle Methods?
+	React lifecycle methods are special methods that are automatically called as a component goes through various stages of its lifecycle.
+ 	They can be used for tasks like initialization, fetching data, and cleaning up resources.
+
+12. List of Life Cycle Methods?
+	1. Mounting Phase
+  		* Constructor
+		* ComponentDidMount
+	2. Updating Phase
+		* Render
+		* componentDidUpdate()
+		* shouldComponentUpdate()
+	3. Unmounting Phase
+		* componentwillUnmount()
+
+13. What is the use of useEffect?
+	useEffect is a React Hook used in functional components to perform side effects in your components. 
+	It can be used for data fetching, DOM manipulations, and other side effects. It replaces many lifecycle methods in functional components.
+
+14. What are props in React?
+	Props (short for properties) are a way to pass data from parent to child components in React.
+ 	They are read-only and provide a mechanism for component communication.
+
+15. What is prop drilling in React?
+	Prop drilling occurs when you need to pass props through multiple levels of nested components to reach a deeply nested child component.
+ 	It can make the code harder to maintain. Context or state management solutions like Redux are often used to avoid prop drilling.
+
+16. What are React Hooks?
+	React Hooks are functions that allow functional components to manage state, side effects, and
+	other features that were previously only possible with class components.
+ 	Common hooks include useState, useEffect, and useContext.
+
+17. What is React Hooks list?
+	Some commonly used React Hooks include:
+		useState
+		useEffect
+		useContext
+		useNavigate
+		useReducer 
+		useparam
+		useSearchparam
+
+18. What are the different ways to style a React component?
+ 	* Internal Style
+	* External Style
+	* Inline Style
+
+19. How do you handle events in React?
+	* onChange()
+	* onClick()
+	* onSubmit()
+
+20. How can you update the State of a component?
+	You can update the state of a component by using the setState method.
+ 	This method takes an object that represents the new state or a function that computes the new state based on the previous state.
+
+21. What is React Router?
+	React Router is a library for handling routing and navigation in React applications.
+	It allows you to create single-page applications with different views and URLs, providing a smooth and consistent user experience.
+
+22. How do you use BrowserRouter?
+	BrowserRouter is a parent component and can have only one child. Links: Let us now create the links of our components.
+	The Link component uses props to describe the location to which the link should navigate.
+	Now, run your application on the local host and click on the link created.
+
+23. How to use Routes & Links?
+	React Router provides the Route component for defining routes and the Link component for navigating between different views.
+	Example:
+		import { Route, Link } from 'react-router-dom';
+		<Link to="/about">About</Link>
+		<Route path="/about" component={About} />
+
+24. What is the use of useParams & useSearchParams?
+	useParams: 
+		This hook from React Router allows you to access the parameters from the URL, useful for dynamic routing.
+	useSearchParams:
+		 It allows you to access and manipulate
+
+25. What is React context? How to createContext?
+	React context is a way to pass data through the component tree without having to pass props down manually at every level.
+	It provides a way to share values like themes, language preferences, or user authentication status with all components in the tree. 
+	You can create a context using the createContext function from React.
+		import React, { createContext } from 'react';		
+		const MyContext = createContext();
+
+26. What is the use of Provider & dispatch method?
+	In the context API, the Provider component is used to wrap the part of the component tree where you want to make the context available.
+	It takes a value prop, which provides the data you want to share. 
+	The dispatch method is not a standard part of the context API but is commonly used in conjunction with state management libraries like Redux.
+	It allows you to dispatch actions to update the context state.
+
+27. What is Read in Context values?
+	To read the values from a context, you can use the useContext hook in functional components or access the context in class components via the Consumer.
+	For example, with the useContext hook:
+		import { useContext } from 'react';
+		const contextValue = useContext(MyContext);
+
+28. How can we pass props from Child to Parent?
+	Create a callback method. This method will get the data from the Child to Parent.
+	Pass your data as props in Child. The Child will call the Parent callback using props.
+	The callback method in the Parent will act as prop to the Child component.
+
+29. How can we pass props from Parent to Child?
+	Passing props from a parent component to a child component in React is the standard way to share data.
+	Simply provide the child component with the necessary props when you include it in the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
